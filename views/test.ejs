@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") -%>
+
+  <body>
+    <!--Header section-->
+    <%- include("./partials/adminHeader.ejs") -%>
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <section class="container">
+      <div class="section-title">
+        <h2>View applicant</h2>
+      </div>
+
+      <div class="container text-white table-responsive py-5">
+        <div class="row g-3">
+          <p class="blog-post-title mt-2" style="color: white; font-size: 36px">
+            Student information
+          </p>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              First name:
+             
+                <%= application.firstname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              Second name:
+             
+              <%= application.secondname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              Surname:
+             
+              <%= application.surname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Date of birth:  <%= application.dob %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Sex:  <%= application.sex %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Religion:  <%= application.religion %></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Entry level:  <%= application.entrylevel%></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Entry class:
+             
+              <%= application.entryclass %>
+              </code>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Parent's or Guardian information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's or Guardian's full name:  <%= application.parentfullname%>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's or Guardian's Email:
+             
+              <%= application.parentemail %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Nationality: <%= application.nationality %></p>
+          </div>
+          <div class="col-md-8">
+            <p style="font-size: 20px">
+              Parent's/Guardian Permanent address: <%= application.permenentadress %>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Contacts information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's/Guardian Current address: <%= application.currentadress %>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 1 Phone Number:
+             
+              <%= application.phone1 %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 2 Phone Number:
+             
+              <%= application.phone2 %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 3 Phone Number:
+             
+              <%= application.phone3 %>
+              </code>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Stuent's Home location
+          </p>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Vilage or street: <%= application.village %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">District: <%= application.district %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Region: <%= application.region %></p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Parents occupation
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Father's occupation: <%= application.fatheroccupation %></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Mother's occupation: <%= application.motherocupation %></p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Guardian information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Guardian Relationship with student: <%= application.guardian_relationship %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============  all our content ends here  ============== -->
+
+    <!-- ======= Footer ======= -->
+    <%- include("./partials/adminFooter.ejs") -%>
+    <!-- Footer end -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <%- include("./partials/scripts.ejs") -%>
+  </body>
+</html>

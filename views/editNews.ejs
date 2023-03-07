@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") -%>
+
+  <style>
+    input:focus{
+        background-color: inherit !important;
+        border: 1px solid white !important;
+    }
+  </style>
+  <body>
+    <!--Header section-->
+    <%- include("./partials/adminHeader.ejs") -%>
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <section class="container bg-dark">
+      <div class="section-title">
+        <h2>Post latest Announcements</h2>
+      </div>
+
+      <form action="/news/<%= news.id %>" method="POST" class="row g-3">
+        <div class="input-group input-group-lg mb-1">
+          <span class="input-group-text" id="inputGroup-sizing-lg"
+            >Heading</span
+          >
+          <input
+            name="heading"
+            type="text"
+            class="form-control text-white"
+            value="<%= news.heading %>"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg"
+            required
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Description</span
+          >
+          <input
+            name="description"
+            type="text"
+            class="form-control text-white"
+            value="<%= news.description %>"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            required
+          />
+        </div>
+
+        <button
+          style="background-color: #ffe7b4; color: #2c4964"
+          type="submit"
+          class="btn btn-primary mt-3"
+        >
+          Update
+        </button>
+      </form>
+    </section>
+
+    <!-- ==============  all our content ends here  ============== -->
+
+    <!-- ======= Footer ======= -->
+    <%- include("./partials/adminFooter.ejs") -%>
+    <!-- Footer end -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <%- include("./partials/scripts.ejs") -%>
+  </body>
+</html>

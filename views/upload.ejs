@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<%- include("./partials/head.ejs") -%>
+	<link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+		rel="stylesheet" />
+
+	<style>
+		.filepond--drop-label.filepond--drop-label label{
+			color: black;
+		}
+	</style>
+
+	<body>
+		<%- include("./partials/header.ejs") -%>
+
+			<div class="container py-5">
+				<h1 class="fs-3">File Upload</h1>
+				<input type="file" name="images" placeholder="Upload images" id="file" multiple>
+				<button id="uploadButton" class="btn w-100 btn-primary" style="background-color: #FD841F; color: #0A2647">Upload images</button>
+			</div>
+
+
+			<div class="toast-container position-fixed bottom-0 end-0 p-3">
+				<div
+					id="notificationToast"
+					class="toast"
+					role="alert"
+					aria-live="assertive"
+					aria-atomic="true"
+					data-bs-delay="5000"
+				>
+					<div class="toast-header">
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="toast"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="toast-body text-success bg-white">Images uploaded successfully</div>
+				</div>
+			</div>
+
+			<div class="toast-container position-fixed bottom-0 end-0 p-3">
+				<div
+					id="failedToast"
+					class="toast"
+					role="alert"
+					aria-live="assertive"
+					aria-atomic="true"
+				>
+					<div class="toast-header">
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="toast"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="toast-body text-danger bg-white">Failed to upload images</div>
+				</div>
+			</div>
+
+
+			<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+			<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+			<script src="/scripts/image_upload.js"></script>
+			<%- include("./partials/scripts.ejs") -%>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%- include("./partials/head.ejs") -%>
+
+  <body>
+    <%- include("./partials/header.ejs") -%>
+
+      <div class="container py-5">
+        <form action="/upload_videos" method="post">
+          <h1 class="fs-3">Video Upload</h1>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white">Video title</label>
+            <input name="title" type="text" class="form-control" id="exampleFormControlInput1"
+              placeholder="Enter the title of the video">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Video url</label>
+            <input name="url" type="text" class="form-control" placeholder="Enter the video url">
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100" style="background-color: #FD841F; color: #0A2647">Upload video</button>
+        </form>
+
+      </div>
+
+      <%- include("./partials/scripts.ejs") -%>
+
+
+  </body>
+
+</html>

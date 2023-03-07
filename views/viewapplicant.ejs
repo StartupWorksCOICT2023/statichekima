@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") -%>
+
+  <body>
+    <!--Header section-->
+    <%- include("./partials/adminHeader.ejs") -%>
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <section class="container">
+      <div class="section-title">
+        <h2>View applicant</h2>
+      </div>
+
+      <!-- <div class="container text-white table-responsive py-5">
+        <div class="row g-3">
+          <p class="blog-post-title mt-2" style="color: white; font-size: 36px">
+            Student information
+          </p>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              First name:
+             
+                <%= application.firstname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              Second name:
+             
+              <%= application.secondname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">
+              Surname:
+             
+              <%= application.surname %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Date of birth:  <%= application.dob %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Sex:  <%= application.sex %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Religion:  <%= application.religion %></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Entry level:  <%= application.entrylevel%></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Entry class:
+             
+              <%= application.entryclass %>
+              </code>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Parent's or Guardian information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's or Guardian's full name:  <%= application.parentfullname%>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's or Guardian's Email:
+             
+              <%= application.parentemail %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Nationality: <%= application.nationality %></p>
+          </div>
+          <div class="col-md-8">
+            <p style="font-size: 20px">
+              Parent's/Guardian Permanent address: <%= application.permenentadress %>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Contacts information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent's/Guardian Current address: <%= application.currentadress %>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 1 Phone Number:
+             
+              <%= application.phone1 %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 2 Phone Number:
+             
+              <%= application.phone2 %>
+              </code>
+            </p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Parent or guardian 3 Phone Number:
+             
+              <%= application.phone3 %>
+              </code>
+            </p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Stuent's Home location
+          </p>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Vilage or street: <%= application.village %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">District: <%= application.district %></p>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 20px">Region: <%= application.region %></p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Parents occupation
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Father's occupation: <%= application.fatheroccupation %></p>
+          </div>
+          <div class="col-md-12">
+            <p style="font-size: 20px">Mother's occupation: <%= application.motherocupation %></p>
+          </div>
+
+          <p
+            class="blog-post-title mt-5 mb-5"
+            style="color: white; font-size: 36px"
+          >
+            Guardian information
+          </p>
+          <div class="col-md-12">
+            <p style="font-size: 20px">
+              Guardian Relationship with student: <%= application.guardian_relationship %>
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      
+
+
+
+        
+
+        
+              <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                  <div class="profilecard">
+                    <div class="profile-card-body">
+                      <div class="d-flex flex-column align-items-center text-center">
+                        <img src="/images/Hekima/iconprofile.png" alt="Admin" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                          <h4 class="text-dark"> <%= application.firstname %>  <%= application.surname %> </h4>
+                          <p class="text-secondary mb-1">Parent's name: <%= application.parentfullname%> </p>
+                          <p class="text-muted font-size-sm">Contact parent below: </p>
+                          <a href="tel: <%= application.phone1 %>">
+                          <button class="btn btn-primary btn-text text-white" style="font-size: 16px;">Call</button>
+                          </a>
+                          <a href="mailto: <%= application.parentemail %>">
+                          <button class="btn btn-primary btn-text text-white" style="font-size: 16px;"> Email</button>
+                        </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="profilecard mt-3">
+                    <!-- <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <img src="/images/Hekima/email.png" style="width: 24px; height: 24px;" alt="email">
+                        <span class="text-secondary"> <%= application.parentemail %></span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <a href="tel: <%= application.phone1 %>">
+                          <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px;" alt="email">
+                          <span class="text-secondary"> <%= application.phone1 %></span>
+                        </a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <a href="tel: <%= application.phone2 %>">
+                          <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px;" alt="email">
+                          <span class="text-secondary"> <%= application.phone2 %></span>
+                        </a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <a href="tel: <%= application.phone3 %>">
+                          <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px;" alt="email">
+                        <span class="text-secondary"> <%= application.phone3 %></span>
+                        </a>
+                      </li>
+                    </ul> -->
+
+                    <div class="list-group">
+                      <a href="mailto: <%= application.parentemail %>" class="list-group-item list-group-item-action">
+                        <img src="/images/Hekima/email.png" style="width: 24px; height: 24px; margin-right: 10px;" alt="email">
+                        <span class="text-secondary"> <%= application.parentemail %></span>
+                      </a>
+                      <a href="tel: <%= application.phone1 %>" class="list-group-item list-group-item-action">
+                        <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px; margin-right: 10px;" alt="email">
+                          <span class="text-secondary"> <%= application.phone1 %></span>
+                      </a>
+                      <a href="tel: <%= application.phone2 %>" class="list-group-item list-group-item-action">
+                        <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px; margin-right: 10px;" alt="email">
+                          <span class="text-secondary"> <%= application.phone2 %></span>
+                      </a>
+                      <a href="tel: <%= application.phone1 %>" class="list-group-item list-group-item-action">
+                        <img src="/images/Hekima/telephone.png" style="width: 24px; height: 24px; margin-right: 10px;" alt="email">
+                        <span class="text-secondary"> <%= application.phone3 %></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="profilecard mb-3">
+                    <div class="profile-card-body">
+                      <div class="ml-3 mt-2 mb-2">
+                      <p class="text-dark ">Student Details</p>
+                      </div>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Full Name</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.firstname %> 
+                             <%= application.secondname %>
+                             <%= application.surname %> 
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Date of birth</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.dob %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Sex</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.sex %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Religion</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.religion %>
+                          </div>
+                        </li>
+                      </ul>
+
+
+                      <div class="ml-3 mt-2 mb-2">
+                        <p class="text-dark ">Application Details</p>
+                      </div>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Entry level</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.entrylevel %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Entry class</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.entryclass %>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>    
+
+
+                  <!-- parents or guardian information -->
+                  
+                  <div class="profilecard mb-3">
+                    <div class="profile-card-body">
+                      <div class="ml-3 mt-2 mb-2">
+                      <p class="text-dark ">Parent's or Guardian information</p>
+                      </div>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Full name</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.parentfullname%>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Nationality</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.nationality %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">current address</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.currentadress %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Permanent address</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.permenentadress %>
+                          </div>
+                        </li>
+                      </ul>
+
+
+                      <div class="ml-3 mt-2 mb-2">
+                        <p class="text-dark ">Students Home Location</p>
+                      </div>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Vilage or street</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.village %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">District</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.district %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Region</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.region %> 
+                          </div>
+                        </li>  
+                      </ul>
+                    </div>
+                  </div> 
+                  
+                  <!-- parents occupation -->
+
+                  <div class="profilecard mb-3">
+                    <div class="profile-card-body">
+                      <div class="ml-3 mt-2 mb-2">
+                      <p class="text-dark ">Parent's or Guardian occupation</p>
+                      </div>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Father's occupation</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.fatheroccupation %>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="col-sm-3">
+                            <h6 class="mb-0 text-dark">Mother's occupation</h6>
+                          </div>
+                          <div class="col-sm-9">
+                            <%= application.motherocupation %>
+                          </div>
+                        </li>
+
+                        <div class="ml-3 mt-2 mb-2">
+                          <p class="text-dark ">Guardian information</p>
+                        </div>
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0 text-dark">Relationship </h6>
+                            </div>
+                            <div class="col-sm-9">
+                              <%= application.guardian_relationship %>
+                            </div>
+                          </li>
+
+                      </ul>
+                    </div>
+                  </div> 
+
+                </div>
+
+                
+
+
+
+
+              </div>
+    
+
+
+
+
+    </section>
+
+    <!-- ==============  all our content ends here  ============== -->
+
+    <!-- ======= Footer ======= -->
+    <%- include("./partials/adminFooter.ejs") -%>
+    <!-- Footer end -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <%- include("./partials/scripts.ejs") -%>
+  </body>
+</html>

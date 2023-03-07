@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") -%>
+
+
+  <body>
+    <%- include("./partials/header.ejs") -%>
+
+      <main id="main">
+        <!-- =======Video Gallery Section ======= -->
+        <section id="portfolio" class="portfolio">
+          <DIV style="text-align:center; padding-bottom:25px;">
+            <h1>VIDEOS</h1>
+          </DIV>
+          <div class="container">
+            <div class="row" data-aos="fade-up">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="d-flex justify-content-center">
+                  <div>
+
+                    <iframe width="420" height="280" src="https://www.youtube.com/embed/ivkg9McYGxU" frameborder="0"
+                    allowfullscreen class="m-2"></iframe>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section><!-- End Video gallery Section -->
+
+
+        <!-- ======= Pictures Gallery Section ======= -->
+        <section id="portfolio" class="portfolio">
+          <DIV style="text-align:center; padding-bottom:25px;">
+            <h1>PICTURES</h1>
+          </DIV>
+          <div class="container">
+            <div class="row portfolio-container" data-aos="fade-up">
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div style="text-align: center;"><img src="./images/Hekima/-6030747040297898563_121.jpg"
+                    class="img-fluid" alt=""></div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div style="text-align: center;"><img src="./images/Hekima/office-1.jpg" class="img-fluid" alt=""></div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div style="text-align: center;"><img src="./images/Hekima/-6030747040297898566_121.jpg"
+                    class="img-fluid" alt=""></div>
+              </div>
+
+              
+            </div>
+
+          </div>
+          </div>
+        </section>
+        <!-- End gallery Section -->
+      </main>
+
+      <!-- ==============  all our content ends here  ============== -->
+
+      <!-- ======= Footer ======= -->
+      <%- include("./partials/footer.ejs") -%>
+        <!-- Footer end -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+        <%- include("./partials/scripts.ejs") -%>
+
+          <script src="/assets/js/gallery_script.js"></script>
+
+
+  </body>
+
+</html>

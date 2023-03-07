@@ -1,0 +1,11 @@
+blue-1
+#01002A
+
+blue-2
+#000153
+
+hekima color
+#ffe7b4
+
+blue-dark
+#2c4964

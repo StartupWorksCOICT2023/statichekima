@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") -%>
+
+  <body>
+    <%- include("./partials/header.ejs") -%>
+
+
+      <!-- ==============  all our content starts here  ============== -->
+
+      <main id="main">
+        <!-- <main id="main" style="background-image: url(images/Hekima/bg-cartoony.png);"> -->
+        <section class="container">
+      
+          <div class="section-title-custom-1">
+            <h2 style="color: white;"> Registration form</h2>
+          </div>
+      
+          <div class="p-4 p-md-5 mb-4 rounded" style="background-color: #D6E4E5;" >
+              <form class="row g-3" method="post">
+                <p class="blog-post-title-2 mt-2" style="font-size:large;"> Student information</p>
+                  <div class="form-group col-md-4">
+                    <label for="inputFname " class="blog-post-title-2">First name</label>
+                    <input name="firstname" type="text" style="color: #0A2647;"  class="form-control form-input" id="inputFname" placeholder="First name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputMiddle name4" class="blog-post-title-2">Second name</label>
+                    <input name="secondname" type="text" style="color: #0A2647;" class="form-control form-input" id="inputsecondname" placeholder="Second name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputMiddle name4" class="blog-post-title-2">Surname</label>
+                    <input name="surname" type="text" style="color: #0A2647;" class="form-control form-input" id="inputSurname" placeholder="Surname" required>
+                  </div>
+                <div class="form-group col-md-4">
+                  <label for="inputMiddle name4" class="blog-post-title-2">Date of birth</label>
+                  <input type="text" name="dob" style="color: #0A2647;" class="form-control form-input" id="inputLast name4" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState" class="blog-post-title-2">Sex</label>
+                  <select id="inputState" name="sex" style="color: #0A2647;" class="form-control form-input" required>
+                    <option> Select sex</option>
+                    <option value="Male">Male</option>
+                    <option valeu="Female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputMiddle name4" class="blog-post-title-2">Religion</label>
+                  <input name="religion" type="text" style="color: #0A2647;" class="form-control form-input" id="inputReligion" placeholder="Religion" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputState" class="blog-post-title-2">Entry level</label>
+                  <select name = "entrylevel"  id="inputState" style="color: #0A2647;" class="form-control form-input" required>
+                    <option selected ></option>
+                    <option value="nursery school">Nursery school level</option>
+                    <option value="Primary school">Primary school level</option>
+                    <option value="Seconadry school">Secondary school level</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputMiddle name4" class="blog-post-title-2">Entry class</label>
+                  <select id="inputState" name="entryclass" style="color: #0A2647;" class="form-control form-input" required>
+                    <option selected></option>
+                    <option value="nursery">Pre-primary(nursery)</option>
+                    <option value="Standard 1">Standard 1</option>
+                    <option value="Standard 2">Standard 2</option>
+                    <option value="Standard 3">Standard 3</option>
+                    <option value="Standard 4">Standard 4</option>
+                    <option value="Standard 5">Standard 5</option>
+                    <option value="Standard 6">Standard 6</option>
+                    <!-- <option value="Standard 7">Standard 7</option> -->
+                    <option value="Form 1">Form 1</option>
+                    <option value="Form 2">Form 2</option>
+                    <option value="Form 3">Form 3</option>
+                    <!-- <option value="Form 4">Form 4</option> -->
+                  </select>
+                </div>
+      
+      
+                <p class="blog-post-title-2 mt-2" style="font-size:large;"> Parent's or Guardian information</p>
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Parent's or Guardian's full name</label>
+                  <input name="parentfullname" type="text" style="color: #0A2647;" class="form-control form-input" id="inputParentsname" placeholder="All parents names" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Parent's or Guardian's Email </label>
+                  <input name="parentemail" type="email" style="color: #0A2647;" class="form-control form-input" id="inputEmail" placeholder="i.e .....@gmail.com" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Nationality</label>
+                  <input name="nationality" type="text" style="color: #0A2647;" class="form-control form-input" id="inputNationality" placeholder="i.e Tanzanian" required>
+                </div>
+                <div class="form-group col-md-8">
+                  <label for="inputFname4" class="blog-post-title-2">Parent's/Guardian Permanent address</label>
+                  <input name="permenentadress" type="text" style="color: #0A2647;" class="form-control form-input" id="inputPostAddress" placeholder="i.e P.O.BOX ....." required>
+                </div>
+      
+                <p class="blog-post-title-2 mt-2" style=" font-size:large;"> Contacts information</p>
+      
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Parent's/Guardian Current address</label>
+                  <input name="currentadress" type="text" style="color: #0A2647;" class="form-control form-input" id="inputHomeAdress" placeholder="i.e Kasulu, kigoma" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Parent or guardian 1 Phone Number</label>
+                  <input name="phone1" type="text" style="color: #0A2647;" class="form-control form-input" id="phoneno1" placeholder="i.e Father's phone no." required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Parent or guardian 2 Phone Number</label>
+                  <input name="phone2" type="text" style="color: #0A2647;" class="form-control form-input" id="phoneno2" placeholder="i.e Mother's phone no." required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Parent or guardian 3 Phone Number</label>
+                  <input name="phone3" type="text" style="color: #0A2647;" class="form-control form-input" id="phoneno3" placeholder="i.e Relative's phone no." required>
+                </div>
+      
+                <p class="blog-post-title-2 mt-2" style="font-size:large;">Home Location</p>
+      
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Vilage or street</label>
+                  <input name="village" type="text" style="color: #0A2647;" class="form-control form-input" id="HomevillageOrStreet" placeholder="i.e kabanga village" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">District</label>
+                  <input name="district" type="text" style="color: #0A2647;" class="form-control form-input" id="HomeDistrict" placeholder="i.e Kasulu" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputFname4" class="blog-post-title-2">Region</label>
+                  <input name="region" type="text" style="color: #0A2647;" class="form-control form-input" id="HomeRegion" placeholder="i.e Kigoma" required>
+                </div>
+      
+                <p class="blog-post-title-2 mt-2" style="font-size:large;">Parents occupation</p>
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Father's occupation</label>
+                  <input name="fatheroccupation" style="color: #0A2647;" type="text"  class="form-control form-input" id="parentOccupation1" placeholder="i.e Doctor, Engineer, business man" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Mother's occupation</label>
+                  <input name="motherocupation" type="text" style="color: #0A2647;" class="form-control form-input" id="parentOccupation2" placeholder="i.e Doctor, Engineer, business woman">
+                </div>
+      
+                <p class="blog-post-title-2 mt-2" style="font-size:large;">Guardian information</p>
+                <div class="form-group">
+                  <label for="inputFname4" class="blog-post-title-2">Guardian Relationship with student</label>
+                  <input name="guardian_relationship" type="text" style="color: #0A2647;"  class="form-control form-input" id="Relationship" placeholder="i.e Uncle, Aunt, Relative, Eduaction Sponsor">
+                </div>
+      
+                <button style="background-color: #0A2647; color: #fff; font-size:large;" font-size:large;" type="submit" class="btn btn-primary mt-3">Submit</button>
+              </form>
+          </div>
+          </section>
+      
+        </main>
+
+
+
+
+
+      <!-- ==============  all our content ends here  ============== -->
+
+
+
+      <!-- ======= Footer ======= -->
+      <%- include("./partials/footer.ejs") -%>
+
+        <!-- Footer end -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+        <%- include("./partials/scripts.ejs") -%>
+
+
+  </body>
+
+</html>

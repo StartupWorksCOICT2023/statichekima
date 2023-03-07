@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include("./partials/head.ejs") -%>
+
+
+<body>
+
+    <!--Header section-->
+  <%- include("./partials/adminHeader.ejs") -%>
+
+  <!-- ==============  all our content starts here  ============== -->
+
+  <section class="container" >
+
+    <div class="section-title">
+      <h2>Admin Dashboard</h2>
+    </div>
+  
+    <div class="row">
+      <div class="card-grid">
+          <a class="card" href="/news">
+              <div class="card__background" style="background-image: url(images/Hekima/kidwithpc.png)"></div>
+              <div class="card__content">
+                <h3 class="card__heading">Upload News</h3>
+                <!-- <p class="card__category lead">Click this card, to get schools documents such as joining instructions, joining forms in our catalogue of documents</p> -->
+              </div>
+            </a>
+        <a class="card" href="/applications">
+          <div class="card__background" style="background-image: url(images/Hekima/meeting.png)"></div>
+          <div class="card__content">
+            <h3 class="card__heading">View applications</h3>
+            <!-- <p class="card__category lead">Click this card, to get schools documents such as joining instructions, joining forms in our catalogue of documents</p> -->
+          </div>
+        </a>
+        <a class="card" href="upload_videos">
+          <div class="card__background" style="background-image: url(images/Hekima/gallery.png)"></div>
+          <div class="card__content">
+            <h3 class="card__heading">Upload videos</h3>
+            <!-- <p class="card__category lead">Get to know, the schools leadership, schools history and a word from the school heads </p> -->
+          </div>
+        </li>
+        <a class="card" href="/upload_images">
+          <div class="card__background" style="background-image: url(images/Hekima/gallery.png)"></div>
+          <div class="card__content">
+            <h3 class="card__heading">Upload photos</h3>
+            <!-- <p class="card__category lead">Take a look at our collection of photos from schools most recent events</p> -->
+          </div>
+        </a>
+        <!-- <a class="card" href="/deleteMedia">
+          <div class="card__background" style="background-image: url(images/Hekima/gallery.png)"></div>
+          <div class="card__content">
+            <h3 class="card__heading">Delete videos and Photos</h3>
+          </div>
+        </a> -->
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  </section>
+    
+    <!-- ==============  all our content ends here  ============== -->
+
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+            
+        <%- include("./partials/scripts.ejs") -%>
+    
+</body>
+    
+</html>

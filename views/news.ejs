@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") -%>
+
+  <body>
+
+    <% if(admin == "admin") {%>
+    <!--Header section-->
+    <%- include("./partials/adminHeader.ejs") -%>
+
+    <%} else {%>
+
+      <%- include("./partials/header.ejs") -%>  
+
+      <%} %>
+
+    <!-- ==============  all our content starts here  ============== -->
+
+    <section class="container">
+
+      <% if(admin == "admin") {%>
+      <div class="d-flex justify-content-end">
+        <a class="text-decoration-none" href="/post_news">
+          <button
+            style="background-color: #FD841F; color: #0A2647"
+            class="btn btn-success float-end"
+          >
+            Post announcement
+          </button>
+        </a>
+      </div>
+      <%}%>
+
+      <% if(createdNews.length > 0) {%>
+      <div class="section-title mt-4">
+        <h2>Uploaded announcements</h2>
+      </div>
+      <div class="container text-white table-responsive pb-5">
+        <table class="table text-white table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Description</th>
+              <th scope="col">Created at</th>
+              <th scope="col">Updated at</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (const news of createdNews ){ %>
+            <tr>
+              <th scope="row">#</th>
+              <td><%= news.heading %></td>
+              <td><%= news.description %></td>
+              <td><%= news.createdAt %></td>
+              <td><%= news.updatedAt %></td>
+              <td><a href="/news/<%= news.id %>" class="btn bg-white text-dark text-decoration-none">Edit</a>
+              <td><button id="news_<%= news.id %>" class="btn btn-danger delete">Delete</a> 
+            </tr>
+
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      <% }else { %>
+      <h1 class="mt-5 text-center">No anouncements post</h1>
+      <%}%>
+    </section>
+
+    <!-- ==============  all our content ends here  ============== -->
+
+    <!-- ======= Footer ======= -->
+    <%- include("./partials/adminFooter.ejs") -%>
+    <!-- Footer end -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <%- include("./partials/scripts.ejs") -%>
+    <script src="/assets/js/news_script.js"> </script>
+  </body>
+</html>

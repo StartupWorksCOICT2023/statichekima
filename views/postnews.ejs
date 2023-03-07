@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include("./partials/head.ejs") -%>
+
+
+<body>
+
+    <!--Header section-->
+  <%- include("./partials/adminHeader.ejs") -%>
+
+   <!-- ==============  all our content starts here  ============== -->
+
+   <section class="container" >
+
+    <div class="section-title">
+      <h2>Post latest Announcements</h2>
+    </div>
+  
+  <form action="/news" method="POST" class="row g-3">  
+  
+      <div class="input-group input-group-lg  mb-1">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Heading</span>
+          <input name="heading" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="text-transform: uppercase;" required>
+       </div>
+  
+       <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+            <input name="description" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+       </div>
+    
+  
+    <button style="background-color: #FD841F; color: #0A2647; font-size:large;" type="submit" class="btn btn-primary mt-3">Post</button>
+  </form>
+    
+  
+  
+  
+  
+  </section>
+    
+    <!-- ==============  all our content ends here  ============== -->
+
+        <!-- ======= Footer ======= -->
+        <%- include("./partials/adminFooter.ejs") -%>
+        <!-- Footer end -->
+
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+            
+        <%- include("./partials/scripts.ejs") -%>
+    
+</body>
+    
+</html>
